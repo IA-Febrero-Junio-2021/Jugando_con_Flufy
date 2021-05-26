@@ -131,6 +131,12 @@ public class LogicaDatos : MonoBehaviour
 
     public void ClearSave(int saveID) //borrar perfil
     {
+        PlayerPrefs.DeleteKey("Nombre" + saveID);
+        PlayerPrefs.DeleteKey("Fecha" + saveID);
+        PlayerPrefs.DeleteKey("Hora" + saveID);
+        PlayerPrefs.DeleteKey("Puntaje" + saveID);
+        PlayerPrefs.DeleteKey("NivelActual" + saveID);
+        PlayerPrefs.DeleteKey("NivelSuperado" + saveID);
         PlayerPrefs.DeleteKey("Slot" + saveID);
         Botones();
     }
